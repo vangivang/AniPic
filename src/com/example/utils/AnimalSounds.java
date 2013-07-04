@@ -2,52 +2,36 @@ package com.example.utils;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import android.util.Log;
 
+import com.example.viewpagerexample.ImageFragment;
 import com.example.viewpagerexample.R;
 
 public class AnimalSounds {
-	
-	private int[] ANIMALNAME_SOUND = {
-		R.raw.dog_name,
-		R.raw.cat_name, 
-		R.raw.cow_name,
-		R.raw.horse_name,
-		R.raw.sheep_name,
-		R.raw.goat_name,
-		R.raw.pig_name, 
-		R.raw.donkey_name, 
-		R.raw.peacock_name,
-		R.raw.rooster_name,
-		R.raw.duck_name,
-		R.raw.dove_name, 
-		R.raw.parrot_name,
-		R.raw.camel_name, 
-		R.raw.deer_name,
-		R.raw.lion_name,
-		R.raw.elephant_name,
-		R.raw.rhino_name,
-		R.raw.giraffe_name,
-		R.raw.bear_name, 
-		R.raw.zebra_name, 
-		R.raw.hippo_name, 
-		R.raw.monkey_name,
-		R.raw.dolphine_name, 
-		R.raw.whale_name 
-		};
-	
+
+	private int[] ANIMALNAME_SOUND = { R.raw.dog_name, R.raw.cat_name,
+			R.raw.cow_name, R.raw.horse_name, R.raw.sheep_name,
+			R.raw.goat_name, R.raw.pig_name, R.raw.donkey_name,
+			R.raw.peacock_name, R.raw.rooster_name, R.raw.duck_name,
+			R.raw.dove_name, R.raw.parrot_name, R.raw.camel_name,
+			R.raw.deer_name, R.raw.lion_name, R.raw.elephant_name,
+			R.raw.rhino_name, R.raw.giraffe_name, R.raw.bear_name,
+			R.raw.zebra_name, R.raw.hippo_name, R.raw.monkey_name,
+			R.raw.dolphine_name, R.raw.whale_name };
+
 	private static MediaPlayer mp;
 	private Activity myActivity;
-	
-	public AnimalSounds(Activity activity){
+
+	public AnimalSounds(Activity activity) {
 		myActivity = activity;
 	}
-	
-	public void playAnimalNameSound(int action){
+
+	public void playAnimalNameSound(int action) {
 		playSound(ANIMALNAME_SOUND[action]);
 	}
-	
-	
-	public void playAnimalPicSound(int action){
+
+	public void playAnimalPicSound(int action) {
 		switch (action) {
 		case R.drawable.p1:
 			playSound(R.raw.dogogg);
@@ -128,7 +112,27 @@ public class AnimalSounds {
 			return;
 		}
 	}
-	
+
+	public void playSequential(final int resId) {
+		playAnimalNameSound(resId);
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				try {
+					Thread.sleep(1500);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				// Using static method to retrieve the currently
+				// displayed image's resource ID
+				// the playAnimalPicSound will work
+				playAnimalPicSound(ImageFragment.getAnimalPicId(resId));
+			}
+		}).start();
+
+	}
+
 	private void playSound(int resId) {
 		if (mp != null) {
 			mp.reset();

@@ -6,22 +6,27 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.utils.ImageCycler;
 
 public class OpeningActivity extends Activity implements OnClickListener{
+	
+	private static final String INFO_URL = "http://www.google.com";
 
 	private ImageView button1;
 	private ImageView button2;
 	private ImageView button3;
 	private ImageView button4;
+	private Button infoButton;
 
 	private ImageCycler picCycler1;
 	private ImageCycler picCycler2;
@@ -43,6 +48,7 @@ public class OpeningActivity extends Activity implements OnClickListener{
 		button2 = (ImageView) findViewById(R.id.openning_iv2);
 		button3 = (ImageView) findViewById(R.id.openning_iv3);
 		button4 = (ImageView) findViewById(R.id.openning_iv4);
+		infoButton = (Button) findViewById(R.id.openning_btn_info);
 		
 		// Uncomment this if round buttons return to active duty
 		// button1.setOnClickListener(this);
@@ -72,6 +78,16 @@ public class OpeningActivity extends Activity implements OnClickListener{
 
 					}
 				});
+		
+		// Launch device browser and go to specified URL
+		infoButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(INFO_URL));
+				startActivity(browserIntent);
+			}
+		});
 	}
 	
 	private Drawable[] xmlArrayToDrawableArray(int arrayName){

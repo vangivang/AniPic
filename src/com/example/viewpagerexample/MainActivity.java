@@ -171,6 +171,10 @@ public class MainActivity extends FragmentActivity {
 	protected void onPause() {
 		super.onPause();
 		AnimalSounds.stopSound();
+		if (swipeTimer != null){
+			swipeTimer.cancel();
+			swipeTimer.purge();
+		}
 	}
 
 	private void setClickOnText(TextView v) {
@@ -195,7 +199,7 @@ public class MainActivity extends FragmentActivity {
 					@Override
 					public void run() {
 						try {
-							Thread.sleep(1000);
+							Thread.sleep(1500);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
@@ -260,11 +264,14 @@ public class MainActivity extends FragmentActivity {
 				if (mPager.getCurrentItem() == ImageFragment.animalPic.length-1) {
 					mPager.setCurrentItem(0, false);
 					sounds = new AnimalSounds(MainActivity.this);
-					sounds.playAnimalNameSound(mPager.getCurrentItem());
+					sounds.playAnimalPicSound(ImageFragment
+							.getAnimalPicId(mPager.getCurrentItem()));
 				}else{
 					mPager.setCurrentItem(mPager.getCurrentItem()+1, true);
 					sounds = new AnimalSounds(MainActivity.this);
-					sounds.playAnimalNameSound(mPager.getCurrentItem());
+//					sounds.playAnimalPicSound(ImageFragment
+//							.getAnimalPicId(mPager.getCurrentItem()));
+					sounds.playSequential(mPager.getCurrentItem());
 				}
 			}
 		};
@@ -277,7 +284,7 @@ public class MainActivity extends FragmentActivity {
 			public void run() {
 				handler.post(update);
 			}
-		}, 100, 2000);
+		}, 100, 5000);
 	}
 
 	// Connects with animal name array.
