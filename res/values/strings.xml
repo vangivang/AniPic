@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AniPic!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="welcome">ממלכת החיות</string>
+    <string name="return_to_start">חזור להתחלה</string>
+    <string name="quit_app">צא</string>
+    <string name="loop_pictures">נגן</string>
+    <string name="stop_loop_pictures">עצור</string>
+    
+
+   <!--  <string-array name="animal_name">
+        <item>גֶּ\'ירָף</item>
+        <item>אַרְיֵה</item>
+        <item>קוֹף</item>
+        <item>תַּרְנְגֹלֶת</item>
+        <item>דֹּב</item>
+        <item>גָּמָל</item>
+        <item>חָתוּל</item>
+        <item>פָּרָה</item>
+        <item>צְבִי</item>
+        <item>כֶּלֶב</item>
+        <item>חֲמוֹר</item>
+        <item>יוֹנָה</item>
+        <item>בַּרְוָז</item>
+        <item>פִּיל</item>
+        <item>הִיפּוֹפּוֹטָם</item>
+        <item>סוּס</item>
+        <item>תֻּכִּי</item>
+        <item>טַוָּס</item>
+        <item>קַרְנָף</item>
+        <item>תַרְנְגֹל</item>
+        <item>כִּבְשָׂה</item>
+        <item>זֶבְּרָה</item>
+        <item>תַּיִשׁ</item>
+        <item>חֲזִיר</item>
+        <item>יַנְשׁוּף</item>
+        
+    </string-array> -->
+    
+     <string-array name="animal_name">
+        <item>כלב</item>
+        <item>חתול</item>
+        <item>פרה</item>
+        <item>סוס</item>
+        <item>כבשה</item>
+        <item>תיש</item>
+        <item>חזיר</item>
+        <item>חמור</item>
+        <item>טוס</item>
+        <item>תרנגלת</item>
+        <item>ברוז</item>
+        <item>יונה</item>
+        <item>תכי</item>
+        <item>גמל</item>
+        <item>צבי</item>
+        <item>אריה</item>
+        <item>פיל</item>
+        <item>קרנף</item>
+        <item>ג\'ירף</item>
+        <item>דב</item>
+        <item>זברה</item>
+        <item>היפופוטם</item>
+        <item>קוף</item>
+        <item>דולפין</item>
+        <item>ליוותן</item>
+        
+    </string-array>
+    
+    <string-array name="animal_pic800">
+        <item>R.id.splash</item>
+        <item>R.id.girrafe</item>
+        <item>R.id.lion</item>
+        <item>R.id.monkey</item>
+        <item>R.id.chicken</item>
+        <item>R.id.bear</item>
+        <item>R.id.camel</item>
+        <item>R.id.cat</item>
+        <item>R.id.cow</item>
+        <item>R.id.deer</item>
+        <item>R.id.dog</item>
+        <item>R.id.donkey</item>
+        <item>R.id.dove</item>
+        <item>R.id.duck</item>
+        <item>R.id.elephant</item>
+        <item>R.id.hippo</item>
+        <item>R.id.horse</item>
+        <item>R.id.parot</item>
+        <item>R.id.peacock</item>
+        <item>R.id.rhino</item>
+        <item>R.id.rooster</item>
+        <item>R.id.sheep</item>
+        <item>R.id.zebra</item>
+    </string-array>
+
+</resources>

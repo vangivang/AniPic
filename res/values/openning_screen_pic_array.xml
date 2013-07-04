@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="openning_screen_big_array">
+        <item>@drawable/big22</item>
+        <item>@drawable/big23</item>
+        <item>@drawable/big24</item>
+        <item>@drawable/big25</item>
+    </array>
+    <array name="openning_screen_small_1">
+        <item>@drawable/small1</item>
+        <item>@drawable/small2</item>
+        <item>@drawable/small3</item>
+        <item>@drawable/small4</item>
+        <item>@drawable/small5</item>
+        <item>@drawable/small6</item>
+        <item>@drawable/small7</item>
+    </array>
+    <array name="openning_screen_small_2">
+        <item>@drawable/small8</item>
+        <item>@drawable/small9</item>
+        <item>@drawable/small10</item>
+        <item>@drawable/small11</item>
+        <item>@drawable/small12</item>
+        <item>@drawable/small13</item>
+        <item>@drawable/small14</item>
+        
+    </array>
+    <array name="openning_screen_small_3">
+        <item>@drawable/small14</item>
+        <item>@drawable/small15</item>
+        <item>@drawable/small16</item>
+        <item>@drawable/small17</item>
+        <item>@drawable/small18</item>
+        <item>@drawable/small19</item>
+        <item>@drawable/small20</item>
+        <item>@drawable/small21</item>
+    </array>
+
+</resources>

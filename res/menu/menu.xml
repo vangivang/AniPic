@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/return_to_start"
+        android:showAsAction="ifRoom"
+        android:title="@string/return_to_start"/>
+    <item
+        android:id="@+id/quit_app"
+        android:showAsAction="ifRoom"
+        android:title="@string/quit_app"/>
+    <item
+        android:id="@+id/play"
+        android:title="@string/loop_pictures">
+    </item>
+    <item
+        android:id="@+id/stop"
+        android:title="@string/stop_loop_pictures">
+    </item>
+
+</menu>
